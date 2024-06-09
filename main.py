@@ -6,7 +6,6 @@ from ultralytics import YOLO
 
 model=YOLO('yolov8s.pt')
 
-
 area1=[(312,388),(289,390),(474,469),(497,462)]
 
 area2=[(279,392),(250,397),(423,477),(454,469)]
@@ -14,8 +13,7 @@ def RGB(event, x, y, flags, param):
     if event == cv2.EVENT_MOUSEMOVE :  
         colorsBGR = [x, y]
         print(colorsBGR)
-        
-
+    
 cv2.namedWindow('RGB')
 cv2.setMouseCallback('RGB', RGB)
 
